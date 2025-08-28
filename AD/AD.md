@@ -6,4 +6,3 @@
 - [Group Management](Groups.md)
 - [Password Reset](PasswordReset.md)
 - [Appendix](Appendix.md)
-
