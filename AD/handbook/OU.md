@@ -27,3 +27,5 @@ foreach ($guid in $guids) {
     Remove-ADOrganizationalUnit -Identity $guid
 }
 ```
+
+[← Back to Index](../AD.md)

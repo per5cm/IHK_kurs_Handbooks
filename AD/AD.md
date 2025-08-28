@@ -7,4 +7,3 @@
 - [Password Reset](handbook/PasswordReset.md)
 - [Appendix](handbook/Appendix.md)
 
-[← Back to Index](../AD.md)

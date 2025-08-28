@@ -7,3 +7,5 @@ New-ADGroup -Name "Vertrieb" `
   -GroupScope Global -GroupCategory Distribution `
   -Description "Alle Mitarbeiter im Vertrieb"
 ```
+
+[← Back to Index](../AD.md)

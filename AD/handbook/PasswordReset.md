@@ -20,3 +20,5 @@ function ResetPwd {
 }
 Export-ModuleMember -Function ResetPwd
 ```
+
+[← Back to Index](../AD.md)
