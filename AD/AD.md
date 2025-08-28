@@ -1,8 +1,10 @@
 # Active Directory Admin Handbook
 
 ## Index
-- [OU Management](OU.md)
-- [User Management](Users.md)
-- [Group Management](Groups.md)
-- [Password Reset](PasswordReset.md)
-- [Appendix](Appendix.md)
+- [OU Management](handbook/OU.md)
+- [User Management](handbook/Users.md)
+- [Group Management](handbook/Groups.md)
+- [Password Reset](handbook/PasswordReset.md)
+- [Appendix](handbook/Appendix.md)
+
+[← Back to Index](../AD.md)
