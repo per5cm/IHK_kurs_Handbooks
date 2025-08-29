@@ -1,6 +1,7 @@
 # Active Directory Admin Handbook
 
-- [Hot GPO Poster](Retro GPO Ad_ Update Now!.png)
+![Hot GPO Poster](Retro_GPO_Ad_Update_Now_!.png)
+
 
 
 ## Index
