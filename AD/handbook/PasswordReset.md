@@ -85,7 +85,7 @@ Unlock-ADAccount -Identity "jhelp"
 ```
 
 **GUI:**
-- In ADUC, right-click user -> **Properties → Account tab** -> check/uncheck *Unlock account*.
+- In ADUC, right-click user -> **Properties -> Account tab** -> check/uncheck *Unlock account*.
 
 ---
 
