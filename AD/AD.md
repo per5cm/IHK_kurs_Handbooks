@@ -1,6 +1,6 @@
 # Active Directory Admin Handbook
 
-![Rent-Free Hot GPO Poster](images/rentfree_gpo_poster.png)
+![Rent-Free Hot GPO Poster](images/Retro_GPO_Ad.png)
 
 
 ## Index
