@@ -32,7 +32,7 @@ Get-ADOrganizationalUnit -Filter *
 ```
 
 **GUI:**
-1. Right‑click OU → **Properties**.
+1. Right‑click OU -> **Properties**.
 2. Open **Attribute Editor** -> copy **objectGUID**.
 
 ---
