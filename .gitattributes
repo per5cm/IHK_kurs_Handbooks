@@ -1,0 +1,14 @@
+# Treat images as binary (no line-ending conversions)
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.gif  binary
+*.webp binary
+
+# Normalize text files to LF in repo
+* text=auto eol=lf
+
+# Windows-friendly endings for Windows scripts (optional)
+*.bat eol=crlf
+*.cmd eol=crlf
+*.ps1 eol=crlf
