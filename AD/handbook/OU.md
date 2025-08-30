@@ -88,7 +88,7 @@ Get-ADObject -IncludeDeletedObjects -Filter 'isDeleted -eq $true -and objectClas
 Restore-ADObject -Identity [Guid]"xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
 ```
 
-**GUI:** Use the **Active Directory Administrative Center (ADAC)** → **Deleted Objects** container → restore.
+**GUI:** Use the **Active Directory Administrative Center (ADAC)** -> **Deleted Objects** container → restore.
 
 ---
 
