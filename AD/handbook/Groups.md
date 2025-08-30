@@ -15,7 +15,7 @@ New-ADGroup -Name "Vertrieb" `
 **Notes:**
 - `GroupScope`: Global, DomainLocal, or Universal.
 - `GroupCategory`: Security (permissions) or Distribution (mail lists).
-- [Group scope table](handbook/tabels/table_gs.md)
+- [Group scope table](tabels/table_gs.md)
 
 **GUI:**
 1. Open **Active Directory Users and Computers (ADUC)**.
