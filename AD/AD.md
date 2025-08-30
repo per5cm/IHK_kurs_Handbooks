@@ -1,6 +1,6 @@
 # Active Directory Admin Handbook
 
-![Rent-Free Hot GPO Poster](images/retro_gpo.png)
+![Rent-Free Hot GPO Poster](https://raw.githubusercontent.com/per5cm/AD_GPO_Kerberos._Network_Notes/main/AD/images/retro_gpo.png)
 
 
 ## Index
