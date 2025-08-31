@@ -2,6 +2,8 @@
 
 ![Poster](images/retro_gpo.png)
 
+## Epigraph
+
 Active Directory Survival Guide
 
 by Alchemist, with a touch of madness
@@ -16,6 +18,7 @@ So grab your keyboard, use good old-fashioned click-and-drop, and remember:
 
 You don’t manage AD. You survive it.
 
+**inspired by Hunter S. Thompson, but applied to AD madness.**
 
 ## Index
 - [OU Management](handbook/OU.md)
