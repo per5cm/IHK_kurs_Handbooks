@@ -11,7 +11,7 @@ New-ADOrganizationalUnit -Name "TestOU" -Description "OU for Training purpose to
 ```
 
 **GUI:**
-1. Open **Active Directory Users and Computers**.
+1. Open **Active Directory Users and Computers (ADUC)**.
 2. Right‑click the domain -> **New -> Organizational Unit**.
 3. Name it and check *Protect from accidental deletion*.
 
@@ -88,7 +88,7 @@ Get-ADObject -IncludeDeletedObjects -Filter 'isDeleted -eq $true -and objectClas
 Restore-ADObject -Identity [Guid]"xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
 ```
 
-**GUI:** Use the **Active Directory Administrative Center (ADAC)** -> **Deleted Objects** container → restore.
+**GUI:** Use the **Active Directory Administrative Center (ADAC)** -> **Deleted Objects** container -> restore.
 
 ---
 
