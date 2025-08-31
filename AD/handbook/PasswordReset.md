@@ -72,7 +72,7 @@ Unblock-File C:\Admin\Scripts\ResetPwd.ps1
 ```powershell
 ResetPwd -UserName "jhelp" -NewPlainTextPassword "Temp2025!"
 ```
-> **Tip:** Dot-sourcing must be repeated in new sessions unless you add it to your profile (see 3c).
+> **Tip:** Dot-sourcing must be repeated in new sessions unless you add it to your profile.
 
 ---
 
