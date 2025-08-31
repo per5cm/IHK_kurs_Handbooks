@@ -4,9 +4,9 @@
 
 ## Epigraph
 
-Active Directory Survival Guide
+>Active Directory Survival Guide
 
-by Alchemist, with a touch of madness
+>by Alchemist, with a touch of madness
 
 This is not a Microsoft doc. This is a field journal from the trenches of IT. Here you will find the raw rituals of creating OUs, wrangling groups, and resurrecting locked accounts.
 
