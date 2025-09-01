@@ -79,7 +79,7 @@ Remove-ADUser -Identity "jhelp" -Confirm:$false
 ```
 
 **GUI:**
-- Right‑click user -> **Delete**.
+- Right‑click user -> **Delete (Löchen)**.
 
 ---
 

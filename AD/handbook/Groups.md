@@ -19,8 +19,8 @@ New-ADGroup -Name "Vertrieb" `
 
 **GUI:**
 1. Open **Active Directory Users and Computers (Benutzer und Computer)**.
-2. Right-click the target OU -> **New -> Group**.
-3. Enter name, choose **Group scope** and **Group type**.
+2. Right-click the target OU -> **New (neu) -> Group (Gruppe)**.
+3. Enter name, choose **Group scope (Gruppenbereich)** and **Group type (Gruppentyp)**.
 
 ---
 
@@ -46,9 +46,9 @@ Remove-ADGroupMember -Identity "Vertrieb" -Members "jhelp" -Confirm:$false
 ```
 
 **GUI:**
-1. Open group **Properties**.
-2. Go to **Members** tab.
-3. Use **Add** or **Remove**.
+1. Open group **Properties (Eigenschaften)**.
+2. Go to **Members (Mitglieder)** tab.
+3. Use **Add (Hinzufügen)** or **Remove (Entfernen)**.
 
 ---
 
@@ -59,7 +59,7 @@ Get-ADGroupMember -Identity "Vertrieb"
 ```
 
 **GUI:**
-- Open group **Properties -> Members** tab.
+- Open group **Properties (Eigenschaften) -> Members (Mitglieder)** tab.
 
 ---
 
@@ -70,7 +70,7 @@ Rename-ADObject -Identity "CN=Vertrieb,OU=Groups,DC=domain,DC=com" -NewName "Sal
 ```
 
 **GUI:**
-- Right-click group -> **Rename**.
+- Right-click group -> **Rename (Umbenennen)**.
 
 ---
 
@@ -92,7 +92,7 @@ Remove-ADGroup -Identity "Vertrieb" -Confirm:$false
 ```
 
 **GUI:**
-- Right-click group -> **Delete**.
+- Right-click group -> **Delete (Löchen)**.
 
 ---
 
