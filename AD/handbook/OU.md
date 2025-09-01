@@ -1,6 +1,13 @@
 # OU Management
 
-> **Tip** Before you start to add OUs... Do this first! when in Active directory Users and Computers(Benutzer und Computer) view -> advanced features (Ansicht -> Erweiterte Features)
+## 0. Set-up 
+
+# Before you start to add OUs... Do this first!
+**Why** To see more features in Active Directory GUI
+
+**GUI** 
+1. Active directory Users and Computers(Benutzer und Computer) 
+2. view -> advanced features (Ansicht -> Erweiterte Features)
 
 ---
 
