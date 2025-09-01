@@ -28,7 +28,7 @@ Get-ADUser -Identity "jhelp" -Properties * | Format-List Name,SamAccountName,Dis
 ```
 
 **GUI:**
-- In ADUC, click the **OU** or domain root, then use the **Find/Search** bar.
+- In Active Directory Users and Computers (ADUC), click the **OU** or domain root, then use the **Find/Search** bar.
 
 ---
 
