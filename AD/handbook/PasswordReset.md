@@ -11,7 +11,7 @@ Set-ADUser -Identity "jhelp" -ChangePasswordAtLogon $true
 
 **GUI:**
 1. In **Active Directory Users and Computers (Benutzer und Computer)**, right-click the user.
-2. Select **Reset Password**.
+2. Select **Reset Password (Kennwort zurücksetzen)**.
 3. Enter the new password.
 4. Optionally check **User must change password at next logon**.
 
@@ -85,7 +85,7 @@ Unlock-ADAccount -Identity "jhelp"
 ```
 
 **GUI:**
-- In ADUC, right-click user -> **Properties -> Account tab** -> check/uncheck *Unlock account*.
+- In Active Directory Users and Computers (Benutzer und Computer), right-click user -> **Properties (Eigenschaften) -> Account tab (Kontosperrung aufheben)** -> check/uncheck *Unlock account*.
 
 ---
 
