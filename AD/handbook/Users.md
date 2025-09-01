@@ -15,8 +15,8 @@ New-ADUser -Name "Jonas Help" `
 
 **GUI:**
 1. Open **Active Directory Users and Computers(Benutzer und Computers)**.
-2. Right‑click the target OU -> **New -> User**.
-3. Enter **First name, Last name, User logon name**.
+2. Right‑click the target OU -> **New (neu) -> User (Benutzer)**.
+3. Enter **First name, Last name, User logon name (Vorname, Nachname, Benutzeranmeldename)**.
 4. Set password and choose options (user must change password, never expires, etc.).
 
 ---
@@ -28,7 +28,7 @@ Get-ADUser -Identity "jhelp" -Properties * | Format-List Name,SamAccountName,Dis
 ```
 
 **GUI:**
-- In Active Directory Users and Computers (ADUC), click the **OU** or domain root, then use the **Find/Search** bar.
+- In Active Directory Users and Computers (Benutzer und Computer), click the **OU** or domain root, then use the **Find/Search (Suchen)** bar.
 
 ---
 
@@ -40,7 +40,7 @@ Enable-ADAccount -Identity "jhelp"
 ```
 
 **GUI:**
-1. Right‑click user -> **Reset Password**.
+1. Right‑click user -> **Reset Password (Kennwort zurücksetzen)**.
 2. Enter new password and options.
 
 ---
@@ -56,7 +56,7 @@ Enable-ADAccount -Identity "jhelp"
 ```
 
 **GUI:**
-- Right‑click user -> **Disable Account** or **Enable Account**.
+- Right‑click user -> **Disable Account (Konto deaktivieren)** or **Enable Account (Konto aktivieren)**.
 
 ---
 
