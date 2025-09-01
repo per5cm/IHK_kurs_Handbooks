@@ -21,8 +21,8 @@ New-ADOrganizationalUnit -Name "TestOU" -Description "OU for Training purpose to
 
 **GUI:**
 1. Open **Active Directory Users and Computers (Benutzer und Computers)**.
-2. Right‑click the domain -> **New -> Organizational Unit**.
-3. Name it and check *Protect from accidental deletion*.
+2. Right‑click the domain -> **New (neu) -> Organizational Unit (Organisationseinheit)**.
+3. Name it and check *Protect from accidental deletion (Objekt vor zufälligem Löschen schützen)*.
 
 ---
 
@@ -41,8 +41,8 @@ Get-ADOrganizationalUnit -Filter *
 ```
 
 **GUI:**
-1. Right‑click OU -> **Properties**.
-2. Open **Attribute Editor** -> copy **objectGUID**.
+1. Right‑click OU -> **Properties (Eigenschaften)**.
+2. Open **Attribute Editor (Attribut-Editor)** -> copy **objectGUID**.
 
 ---
 
@@ -52,7 +52,7 @@ Get-ADOrganizationalUnit -Filter *
 Rename-ADObject -Identity "OU=TestOU,DC=ralys,DC=domain,DC=com" -NewName "TestOU-Remastered"
 ```
 
-**GUI:** Right‑click OU -> **Rename**.
+**GUI:** Right‑click OU -> **Rename (Umbenennen)**.
 
 ---
 
@@ -82,7 +82,7 @@ Remove-ADOrganizationalUnit -Identity $guid
 ```
 
 **GUI:**
-1. Right‑click OU -> **Properties -> Object tab** -> uncheck *Protect from accidental deletion*.
+1. Right‑click OU -> **Properties (Eigenschaften) -> Object tab (Objekt)** -> uncheck *Protect from accidental deletion (Objekt vor zufälligem Löschen schützen)*.
 2. Delete the OU.
 
 ---
@@ -97,7 +97,7 @@ Get-ADObject -IncludeDeletedObjects -Filter 'isDeleted -eq $true -and objectClas
 Restore-ADObject -Identity [Guid]"xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
 ```
 
-**GUI:** Use the **Active Directory Administrative Center (ADAC)** -> **Deleted Objects** container -> restore.
+**GUI:** Use the **Active Directory Administrative Center (Benutzer und Computer)** -> **Deleted Objects** container -> restore.
 
 ---
 
