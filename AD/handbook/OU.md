@@ -1,5 +1,7 @@
 # OU Management
 
+> **Tip** Before you start to add OUs... Do this first! when in Active directory Users and Computers(Benutzer und Computer) view -> advanced features (Ansicht -> Erweiterte Features)
+
 ---
 
 ## 1. Create an OU
@@ -11,7 +13,7 @@ New-ADOrganizationalUnit -Name "TestOU" -Description "OU for Training purpose to
 ```
 
 **GUI:**
-1. Open **Active Directory Users and Computers (ADUC)**.
+1. Open **Active Directory Users and Computers (Benutzer und Computers)**.
 2. Right‑click the domain -> **New -> Organizational Unit**.
 3. Name it and check *Protect from accidental deletion*.
 

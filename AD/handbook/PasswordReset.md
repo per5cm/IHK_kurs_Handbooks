@@ -10,7 +10,7 @@ Set-ADUser -Identity "jhelp" -ChangePasswordAtLogon $true
 ```
 
 **GUI:**
-1. In **Active Directory Users and Computers (ADUC)**, right-click the user.
+1. In **Active Directory Users and Computers (Benutzer und Computer)**, right-click the user.
 2. Select **Reset Password**.
 3. Enter the new password.
 4. Optionally check **User must change password at next logon**.

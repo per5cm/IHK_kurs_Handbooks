@@ -18,7 +18,7 @@ New-ADGroup -Name "Vertrieb" `
 - [Group scope table](tabels/table_gs.md)
 
 **GUI:**
-1. Open **Active Directory Users and Computers (ADUC)**.
+1. Open **Active Directory Users and Computers (Benutzer und Computer)**.
 2. Right-click the target OU -> **New -> Group**.
 3. Enter name, choose **Group scope** and **Group type**.
 

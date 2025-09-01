@@ -14,7 +14,7 @@ New-ADUser -Name "Jonas Help" `
 ```
 
 **GUI:**
-1. Open **Active Directory Users and Computers**.
+1. Open **Active Directory Users and Computers(Benutzer und Computers)**.
 2. Right‑click the target OU -> **New -> User**.
 3. Enter **First name, Last name, User logon name**.
 4. Set password and choose options (user must change password, never expires, etc.).
