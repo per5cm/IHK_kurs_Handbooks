@@ -31,7 +31,7 @@ Get-ADGroup -Identity "Vertrieb" -Properties * | Format-List Name,SamAccountName
 ```
 
 **GUI:**
-- In Active Directory Users and Computer(Benutzer und Computer), search for the group in the domain or OU.
+- In Active Directory Users and Computers (Benutzer und Computer), search for the group in the domain or OU.
 
 ---
 
