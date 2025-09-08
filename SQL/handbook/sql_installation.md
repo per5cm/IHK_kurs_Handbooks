@@ -87,35 +87,60 @@ CREATE TABLE favorites (
 ## 5) Everyday query cheat-sheet
 
 ``` sql
-PRAGMA table_info(favorites);
-SELECT COUNT(*) FROM favorites;
-SELECT * FROM favorites WHERE category = 'movie' LIMIT 20;
-SELECT name, rating FROM favorites ORDER BY rating DESC LIMIT 10;
-SELECT category, COUNT(*) FROM favorites GROUP BY category ORDER BY COUNT(*) DESC;
-CREATE INDEX IF NOT EXISTS idx_favorites_category ON favorites(category);
-UPDATE favorites SET rating = 10 WHERE name = 'Blade Runner';
-DELETE FROM favorites WHERE rating < 3;
+.tables;                      -- list all tables in the DB
+.schema favorites;            -- show CREATE TABLE for favorites
+PRAGMA table_info(favorites); -- list columns + types
+```
+# Row basics
+```sql
+SELECT COUNT(*) FROM favorites;                      -- row count
+SELECT * FROM favorites WHERE category = 'movie';    -- filter
+SELECT name, rating FROM favorites ORDER BY rating DESC LIMIT 10; -- top 10
+
 ```
 
 ------------------------------------------------------------------------
 
-## 6) Import/Export
+## 6) Export tricks - dump and backup
 
-**TSV:**
-
-``` sql
-.mode tabs
-.import "C:/path/file.tsv" favorites
-```
-
-**Export:**
+**Export entire table to CSV:**
 
 ``` sql
 .headers on
 .mode csv
-.output "C:/Users/Eric/Desktop/out.csv"
-SELECT name, rating FROM favorites WHERE category = 'game';
+.output "C:/Users/Eric/Desktop/favorites_export.csv"
+SELECT * FROM favorites;
 .output stdout
+```
+
+**Export just a query result:**
+
+``` sql
+.headers on
+.mode csv
+.output "C:/Users/Eric/Desktop/movies.csv"
+SELECT name, rating FROM favorites WHERE category = 'movie';
+.output stdout
+```
+
+**Export schema + data(SQL dump):**
+
+``` sql
+.output "C:/Users/Eric/Desktop/dump.sql"
+.dump
+.output stdout
+```
+
+**Rebuild script of your DB, import back(from exported SQL):**
+
+``` powershell
+sqlite3 new.db ".read dump.sql"
+```
+
+**Import back(from exported SQL):**
+
+``` powershell
+sqlite3 favoritesdb ".read C:/Users/Eric/Desktop/dump.sql"
 ```
 
 ------------------------------------------------------------------------
