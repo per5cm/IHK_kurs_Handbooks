@@ -19,6 +19,7 @@ Variables...* - Under *User variables* -> select **Path** -> *Edit* ->
 
 **Verify:**
 
+**PowerShell:**
 ``` powershell
 sqlite3 -version
 ```
@@ -27,6 +28,7 @@ sqlite3 -version
 
 ## 2) Create/Open a database
 
+**PowerShell:**
 ``` powershell
 cd "C:\Users\Eric\Desktop\Projects\CS50x\Lecture\Lecture_7\database"
 sqlite3 favoritesdb
@@ -34,6 +36,7 @@ sqlite3 favoritesdb
 
 Exit any time with:
 
+**sql:**
 ``` sql
 .quit
 ```
@@ -42,6 +45,7 @@ Exit any time with:
 
 ## 3) Import a CSV
 
+**sql:**
 ``` sql
 .mode csv
 .import "C:/Users/Eric/Desktop/Projects/CS50x/Lecture/Lecture_7/favorites.csv" favorites
@@ -51,12 +55,14 @@ Exit any time with:
 -   `favorites` = table name.
 -   To skip headers (if supported):
 
+**sql:**
 ``` sql
 .import --skip 1 "C:/.../favorites.csv" favorites
 ```
 
 **Check:**
 
+**sql:**
 ``` sql
 .headers on
 .mode column
@@ -68,6 +74,7 @@ SELECT * FROM favorite LIMIT 10;
 
 ## 4) Define a schema first (optional)
 
+**sql:**
 ``` sql
 DROP TABLE IF EXISTS favorites;
 CREATE TABLE favorites (
@@ -86,12 +93,15 @@ CREATE TABLE favorites (
 
 ## 5) Everyday query cheat-sheet
 
+**sql:**
 ``` sql
 .tables;                      -- list all tables in the DB
 .schema favorites;            -- show CREATE TABLE for favorites
 PRAGMA table_info(favorites); -- list columns + types
 ```
 # Row basics
+
+**sql:**
 ```sql
 SELECT COUNT(*) FROM favorites;                      -- row count
 SELECT * FROM favorites WHERE category = 'movie';    -- filter
@@ -105,6 +115,7 @@ SELECT name, rating FROM favorites ORDER BY rating DESC LIMIT 10; -- top 10
 
 **Export entire table to CSV:**
 
+**sql:**
 ``` sql
 .headers on
 .mode csv
@@ -115,6 +126,7 @@ SELECT * FROM favorites;
 
 **Export just a query result:**
 
+**sql:**
 ``` sql
 .headers on
 .mode csv
@@ -125,6 +137,7 @@ SELECT name, rating FROM favorites WHERE category = 'movie';
 
 **Export schema + data(SQL dump):**
 
+**sql:**
 ``` sql
 .output "C:/Users/Eric/Desktop/dump.sql"
 .dump
@@ -133,12 +146,14 @@ SELECT name, rating FROM favorites WHERE category = 'movie';
 
 **Rebuild script of your DB, import back(from exported SQL):**
 
+**PowerShell:**
 ``` powershell
 sqlite3 new.db ".read dump.sql"
 ```
 
 **Import back(from exported SQL):**
 
+**PowerShell:**
 ``` powershell
 sqlite3 favoritesdb ".read C:/Users/Eric/Desktop/dump.sql"
 ```
@@ -156,6 +171,7 @@ sqlite3 favoritesdb ".read C:/Users/Eric/Desktop/dump.sql"
 
 ## 8) One-liner import
 
+**PowerShell:**
 ``` powershell
 sqlite3 "C:\Users\Eric\Desktop\Projects\CS50x\Lecture\Lecture_7\database\favoritesdb" `
 ".mode csv" ".import --skip 1 'C:/Users/Eric/Desktop/Projects/CS50x/Lecture/Lecture_7/favorites.csv' favorites" `
