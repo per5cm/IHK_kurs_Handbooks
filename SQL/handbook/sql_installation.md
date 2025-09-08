@@ -34,6 +34,13 @@ cd "C:\Users\Eric\Desktop\Projects\CS50x\Lecture\Lecture_7\database"
 sqlite3 favoritesdb
 ```
 
+Create data base file in the folder
+
+**sql:**
+``` sql
+.database
+```
+
 Exit any time with:
 
 **sql:**
