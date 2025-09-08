@@ -34,6 +34,8 @@ cd "C:\Users\Eric\Desktop\Projects\CS50x\Lecture\Lecture_7\database"
 sqlite3 favoritesdb
 ```
 
+-   favoritedb just a file name. You can rename it to whatever your humman language is.
+
 Create data base file in the folder
 
 **sql:**
