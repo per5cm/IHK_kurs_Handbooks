@@ -1,5 +1,6 @@
 ## Epigraph
 
+“Excel is a database if you hate yourself.”
 
 ## Index
 - [SQL Installation on Windows](handbook/sql_installation.md)
