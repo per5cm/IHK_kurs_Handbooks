@@ -75,7 +75,6 @@ SELECT COUNT(*) AS rows FROM favorites;
 SELECT * FROM favorite LIMIT 10;
 ```
 
-
 ------------------------------------------------------------------------
 
 ## 4) Path & Windows quirks
