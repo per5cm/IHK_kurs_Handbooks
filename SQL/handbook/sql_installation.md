@@ -77,7 +77,7 @@ SELECT * FROM favorite LIMIT 10;
 
 ------------------------------------------------------------------------
 
-## 4) Define a schema first (optional)
+## 4) (optional) Define a schema first 
 
 **sql:**
 ``` sql
@@ -174,18 +174,7 @@ sqlite3 favoritesdb ".read C:/Users/Eric/Desktop/dump.sql"
 
 ------------------------------------------------------------------------
 
-## 8) One-liner import
-
-**PowerShell:**
-``` powershell
-sqlite3 "C:\Users\Eric\Desktop\Projects\CS50x\Lecture\Lecture_7\database\favoritesdb" `
-".mode csv" ".import --skip 1 'C:/Users/Eric/Desktop/Projects/CS50x/Lecture/Lecture_7/favorites.csv' favorites" `
-".headers on" ".mode column" "SELECT COUNT(*) AS rows FROM favorites;" ".quit"
-```
-
-------------------------------------------------------------------------
-
-## 9) GUI option
+## 8) GUI option
 
 Install **DB Browser for SQLite** if you want a visual tool.
 
