@@ -1,4 +1,6 @@
 # Database Handbook (SQLite + CSV/Excel Workflow)
+**What’s a Database?**
+- A **file** that stores data in a structured way (`favorites.db`). 
 
 ## 0) What we’re using
 - **OS:** Windows 10/11  
@@ -12,7 +14,7 @@
 Keep order or drown in chaos. Suggested layout:
 
 ```
-C:\Users\<You>\Databases\
+C:\Users\Eric\Databases\
 ├── CS50x\
 │   ├── Lecture7\
 │   │   ├── favorites.db
@@ -36,7 +38,7 @@ C:\Users\<You>\Databases\
 - Dumps: `favorites_schema.sql`, `favorites_backup.sql`  
 - CSV exports: `favorites_2025-09-17.csv`  
 
-👉 Lowercase, underscores, and date tags keep life simple.
+- Lowercase, underscores, and date tags keep life simple.
 
 ---
 
@@ -68,7 +70,7 @@ A `.db` file is created automatically when you connect.
 - `favorites` = table name created on the fly.  
 - Use `/` instead of `\` in paths.  
 
-Check:
+Check in sqlite3:
 ```sql
 .headers on
 .mode column
@@ -113,7 +115,7 @@ SELECT name, rating FROM favorites WHERE category = 'movie';
 
 ---
 
-## 7) Backup Strategy
+## 7) (optional) Backup Strategy 
 - Keep **one master `.db`** per project.  
 - Export CSV + SQL dump at milestones.  
 - Tag files with dates.  
@@ -127,15 +129,3 @@ Install **DB Browser for SQLite**:
 - Save/export CSV or Excel-friendly files.  
 
 ---
-
-## 9) Checklist
-- [x] `sqlite3 -version` works  
-- [x] `.db` created in project folder  
-- [x] `.import` brings in CSV data  
-- [x] `.export` saves CSV back out  
-- [x] Excel opens CSV without issue  
-- [x] Backups dated & archived  
-
----
-
-⚡ Golden rule: **DB is the source of truth. CSV/Excel are shadows for sharing.**
