@@ -55,7 +55,7 @@ A `.db` file is created automatically when you connect.
 
 ---
 
-## 4) Import Data from CSV
+## 4) (optional) Import Data from CSV
 ```sql
 .mode csv
 .import "C:/Users/<You>/Databases/CS50x/Lecture7/favorites.csv" favorites
@@ -73,7 +73,7 @@ SELECT COUNT(*) AS rows FROM favorites;
 
 ---
 
-## 5) Export Data
+## 5) (optional) Export Data
 
 **Full table → CSV**
 ```sql
