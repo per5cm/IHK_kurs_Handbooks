@@ -92,5 +92,3 @@ SELECT * FROM favorite LIMIT 10;
 Install **DB Browser for SQLite** if you want a visual tool.
 
 ------------------------------------------------------------------------
-
-
