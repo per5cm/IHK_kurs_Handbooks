@@ -10,14 +10,10 @@
 
 ## 1) Install SQLite on Windows
 
-**Option A --- Portable (fast):** -> 1. Download the **sqlite-tools** ZIP
-from the official site (contains `sqlite3.exe`). -> 2. Extract to a folder
-you own, e.g. -> `C:\Tools\sqlite`. -> 3. Add that folder to your **PATH**: -
-Start -> *Edit the system environment variables* -> *Environment
-Variables...* - Under *User variables* -> select **Path** -> *Edit* ->
-*New* -> `C:\Tools\sqlite` -> OK.
-
-**Verify:**
+- Go to the official site: [SQLite Download Page](https://www.sqlite.org/download.html)  
+- Get the **sqlite-tools zip** (contains `sqlite3.exe`). 
+- Extract to a folder `C:\Tools\sqlite`
+- Add that folder to your **PATH**: -> Start -> *Edit the system environment variables* -> *Environment Variables...* -> Under *User variables* -> select **Path** -> *Edit* -> *New* -> `C:\Tools\sqlite` -> OK.
 
 **PowerShell:**
 ``` powershell
@@ -195,11 +191,4 @@ Install **DB Browser for SQLite** if you want a visual tool.
 
 ------------------------------------------------------------------------
 
-## 10) Checklist
 
--   [x] `sqlite3 -version` works\
--   [x] `cd ...\Lecture_7\database`\
--   [x] `sqlite3 favoritesdb`\
--   [x] `.mode csv`\
--   [x] `.import ... favorites`\
--   [x] `SELECT COUNT(*) FROM favorites;`

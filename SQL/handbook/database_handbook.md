@@ -108,14 +108,7 @@ SELECT name, rating FROM favorites WHERE category = 'movie';
 
 ---
 
-## 6) Excel Workflow
-- Open exported `.csv` directly in Excel.  
-- Or: *Data → Get Data → From Text/CSV*.  
-- Don’t use Excel as the “database” — only as a viewer/editor.  
-
----
-
-## 7) (optional) Backup Strategy 
+## 6) (optional) Backup Strategy 
 - Keep **one master `.db`** per project.  
 - Export CSV + SQL dump at milestones.  
 - Tag files with dates.  
@@ -123,7 +116,7 @@ SELECT name, rating FROM favorites WHERE category = 'movie';
 
 ---
 
-## 8) GUI Option
+## 7) GUI Option
 Install **DB Browser for SQLite**:  
 - Open `.db`, run queries, edit rows.  
 - Save/export CSV or Excel-friendly files.  
