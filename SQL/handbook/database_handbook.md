@@ -1,12 +1,6 @@
-# Database Handbook (SQLite + CSV/Excel Workflow)
+## 0) Database Handbook (SQLite + CSV/Excel Workflow)
 **What’s a Database?**
 - A **file** that stores data in a structured way (`favorites.db`). 
-
-## 0) What we’re using
-- **OS:** Windows 10/11  
-- **Shell:** PowerShell (or Windows Terminal)  
-- **DB:** SQLite (`sqlite3.exe`)  
-- **Optional:** DB Browser for SQLite, Excel  
 
 ---
 
@@ -46,7 +40,7 @@ C:\Users\Eric\Databases\
 From PowerShell:
 
 ```powershell
-cd C:\Users\<You>\Databases\Playground
+cd C:\Users\Eric\Databases\Playground
 sqlite3 mytest.db
 ```
 
@@ -85,7 +79,7 @@ SELECT COUNT(*) AS rows FROM favorites;
 ```sql
 .headers on
 .mode csv
-.output "C:/Users/<You>/Databases/CS50x/Lecture7/exports/favorites.csv"
+.output "C:/Users/Eric/Databases/CS50x/Lecture7/exports/favorites.csv"
 SELECT * FROM favorites;
 .output stdout
 ```
@@ -94,14 +88,14 @@ SELECT * FROM favorites;
 ```sql
 .headers on
 .mode csv
-.output "C:/Users/<You>/Databases/CS50x/Lecture7/exports/movies.csv"
+.output "C:/Users/Eric/Databases/CS50x/Lecture7/exports/movies.csv"
 SELECT name, rating FROM favorites WHERE category = 'movie';
 .output stdout
 ```
 
 **SQL dump (schema + data)**
 ```sql
-.output "C:/Users/<You>/Databases/CS50x/Lecture7/exports/favorites_dump.sql"
+.output "C:/Users/Eric/Databases/CS50x/Lecture7/exports/favorites_dump.sql"
 .dump
 .output stdout
 ```
