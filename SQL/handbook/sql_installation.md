@@ -10,9 +10,9 @@
 
 ## 1) Install SQLite on Windows
 
-**Option A --- Portable (fast):** 1. Download the **sqlite-tools** ZIP
-from the official site (contains `sqlite3.exe`). 2. Extract to a folder
-you own, e.g. `C:\Tools\sqlite`. 3. Add that folder to your **PATH**: -
+**Option A --- Portable (fast):** -> 1. Download the **sqlite-tools** ZIP
+from the official site (contains `sqlite3.exe`). -> 2. Extract to a folder
+you own, e.g. -> `C:\Tools\sqlite`. -> 3. Add that folder to your **PATH**: -
 Start -> *Edit the system environment variables* -> *Environment
 Variables...* - Under *User variables* -> select **Path** -> *Edit* ->
 *New* -> `C:\Tools\sqlite` -> OK.
