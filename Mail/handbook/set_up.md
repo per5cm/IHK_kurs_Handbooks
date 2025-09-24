@@ -15,7 +15,7 @@
 
 
 ## 2. Open Firewall Ports
-**Why:** Allow SMTP + IMAP traffic.
+**Why:** Allow SMTP + POP3 + IMAP traffic.
 
 **GUI Windows Defender**
 
