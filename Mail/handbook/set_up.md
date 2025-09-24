@@ -6,6 +6,12 @@
 
 ## 1. Install DNS Role
 
+**GUI:**
+1. Server Manager -> Add Roles -> DNS Server.
+
+2. Create **Forward Lookup Zone**: yourdomain.local.
+3. Create **Reverse Lookup Zone**: match your network (192.178.99.213/24).
+
 
 ## 2. Open Firewall Ports
 **Why:** Allow SMTP + IMAP traffic.
