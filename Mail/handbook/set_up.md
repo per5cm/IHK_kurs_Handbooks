@@ -17,6 +17,12 @@
 ## 2. Open Firewall Ports
 **Why:** Allow SMTP + IMAP traffic.
 
+**GUI Windows Defender**
+
+1. New Rule(Neue Regeln) --> Port --> TCP --> Local Port (bestimmte lokale port) --> 25, 465, 587 --> Action (Aktion) --> Profile (Profil) --> Name SMTP
+2. New Rule(Neue Regeln) --> Port --> TCP --> Local Port (bestimmte lokale port) --> 110, 995 --> Action (Aktion) --> Profile (Profil) --> Name POP3
+3. New Rule(Neue Regeln) --> Port --> TCP --> Local Port (bestimmte lokale port) --> 143, 993 --> Action (Aktion) --> Profile (Profil) --> Name IMAP
+
 ---
 
 **PowerShell:**
@@ -24,6 +30,8 @@
 New-NetFirewallRule -DisplayName "SMTP 25"  -Direction Inbound -Protocol TCP -LocalPort 25  -Action Allow
 New-NetFirewallRule -DisplayName "SMTP 465" -Direction Inbound -Protocol TCP -LocalPort 465 -Action Allow
 New-NetFirewallRule -DisplayName "SMTP 587" -Direction Inbound -Protocol TCP -LocalPort 587 -Action Allow
+New-NetFirewallRule -DisplayName "POP3 110" -Direction Inbound -Protocol TCP -LocalPort 110 -Action Allow
+New-NetFirewallRule -DisplayName "POP3 995" -Direction Inbound -Protocol TCP -LocalPort 995 -Action Allow
 New-NetFirewallRule -DisplayName "IMAP 143" -Direction Inbound -Protocol TCP -LocalPort 143 -Action Allow
 New-NetFirewallRule -DisplayName "IMAPS 993"-Direction Inbound -Protocol TCP -LocalPort 993 -Action Allow
 ```
