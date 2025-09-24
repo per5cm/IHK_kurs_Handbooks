@@ -1,7 +1,7 @@
 # Mailserver (Weretis) + Thunderbird Setup
 
 ## 0. Before You Start
-**Why:** Ensure your Windows Server is ready.
+**Tip:** Ensure your Windows Server is ready.
 
 
 ## 1. Install DNS Role
