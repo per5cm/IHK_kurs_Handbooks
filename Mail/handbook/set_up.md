@@ -19,9 +19,9 @@
 
 **GUI Windows Defender**
 
-1. New Rule(Neue Regeln) --> Port --> TCP --> Local Port (bestimmte lokale port) --> 25, 465, 587 --> Action (Aktion) --> Profile (Profil) --> Name SMTP
-2. New Rule(Neue Regeln) --> Port --> TCP --> Local Port (bestimmte lokale port) --> 110, 995 --> Action (Aktion) --> Profile (Profil) --> Name POP3
-3. New Rule(Neue Regeln) --> Port --> TCP --> Local Port (bestimmte lokale port) --> 143, 993 --> Action (Aktion) --> Profile (Profil) --> Name IMAP
+1. New Rule(Neue Regeln) -> Port -> TCP -> Local Port (bestimmte lokale port) -> 25, 465, 587 -> Action (Aktion) -> Profile (Profil) -> Name SMTP
+2. New Rule(Neue Regeln) -> Port -> TCP -> Local Port (bestimmte lokale port) -> 110, 995 -> Action (Aktion) -> Profile (Profil) -> Name POP3
+3. New Rule(Neue Regeln) -> Port -> TCP -> Local Port (bestimmte lokale port) -> 143, 993 -> Action (Aktion) -> Profile (Profil) -> Name IMAP
 
 ---
 
