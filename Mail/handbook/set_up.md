@@ -45,6 +45,7 @@ New-NetFirewallRule -DisplayName "IMAPS 993"-Direction Inbound -Protocol TCP -Lo
 1. Install Weretis (setup.exe).
 2. In Weretis Admin:
    - Enable **SMTP** (25 + 465 + 587).
+   - Enable **POP3** (110 + 995).
    - Enable **IMAP** (143 + 993).
 3. Create Domain - E-Mail `test1@yourdomain.local` 
 
