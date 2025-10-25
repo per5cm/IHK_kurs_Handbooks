@@ -196,4 +196,4 @@ Status → System Logs → Firewall
 
 ---
 
-[← Back to Index](../mail.md)
+[← Back to Index](../index.md)
