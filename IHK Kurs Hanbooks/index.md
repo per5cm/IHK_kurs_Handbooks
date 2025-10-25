@@ -4,5 +4,5 @@
 
 ## Index
 - [VM SetUp](handbook/VM_Instalation.md)
-- [SQL Database on Windows](handbook/database_handbook.md)
+- [VM Hardening (Optional)](handbook/VM_Hardening.md)
 - [Appendix](Appendix.md)
