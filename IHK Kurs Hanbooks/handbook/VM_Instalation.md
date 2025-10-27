@@ -1,28 +1,53 @@
-# pfSense Firewall Configuration
+# pfSense Firewall Configuration – Final Lab Version (Proxmox Edition)
+*Created by Alchemist – Wave Campus, 2025*
 
 ---
 
-## 0. Setup Overview
+## 0. Overview
 
-**Why:**  
-To implement a secure perimeter firewall for a small company network following BSI principles (Default Deny, least exposure, clear segmentation).
+**Goal:**  
+To configure a pfSense firewall within a Proxmox virtualized lab environment following BSI-style security principles and best practices.
 
-**System:**  
-- **pfSense version:** 2.7.0-RELEASE (amd64)  
-- **Hardware (virtual):** 1 CPU, 1024 MB RAM, 20 GB Disk, 2 NICs  
-- **WAN:** vtnet0 → 10.10.10.215 / 24  
-- **LAN:** em0 → 192.178.99.215 / 24  
+**Environment:**  
+- **Platform:** Proxmox Virtual Environment (VE)
+- **Firewall:** pfSense 2.7.0-RELEASE (amd64)
+- **Hardware (VM):** 1 CPU, 1024 MB RAM, 20 GB Disk, 2 NICs
 - **Gateway:** 10.10.10.1  
-- **Access:** HTTPS → `https://192.178.99.215`  
-- **IPv6:** Disabled  
-- **DHCP:** Disabled (handled by Windows Server)
+- **WAN (vtnet0):** 10.10.10.217 / 24  
+- **LAN (em0):** 192.178.99.217 / 24  
+- **Access:** HTTPS (WebConfigurator)  
+- **DHCP:** Disabled  
+- **IPv6:** Disabled
 
 ---
 
-## 1. Interface Assignment
+## 1. Proxmox Setup
 
 **Why:**  
-To map virtual network interfaces correctly before IP configuration.
+To host the pfSense virtual machine and provide internal (LAN) and external (WAN) bridges for network isolation.
+
+**Steps:**  
+1. Create a new VM in Proxmox:
+   - Name: `pfSense-FW`
+   - OS: *Other / FreeBSD*
+   - Disk: 20 GB
+   - CPU: 1 core
+   - RAM: 1024 MB
+2. Assign **two network interfaces**:
+   - **WAN:** `vmbr0` (external or VLAN 215 if used for uplink)
+   - **LAN:** `vmbr1` (internal bridge for lab network)
+3. Boot from pfSense ISO.
+4. Follow default installation:
+   - Accept Auto (ZFS) installation.
+   - Reboot after install.
+5. Access pfSense via Proxmox console.
+
+---
+
+## 2. Interface Assignment
+
+**Why:**  
+To ensure that the correct NICs are mapped to WAN and LAN roles.
 
 **Console:**  
 ```bash
@@ -41,17 +66,17 @@ LAN -> em0
 
 ---
 
-## 2. WAN Configuration
+## 3. WAN Configuration
 
 **Why:**  
-Defines the external (upstream) network connection.
+To define the external connection that reaches the upstream gateway.
 
 **Console:**  
 ```bash
 Option 2) Set interface(s) IP address
-Enter number of interface: 1  (WAN)
+Enter number of interface: 1 (WAN)
 Configure IPv4 via DHCP? (y/n): n
-Enter IPv4 address: 10.10.10.215
+Enter IPv4 address: 10.10.10.217
 Enter subnet bit count: 24
 Enter upstream gateway: 10.10.10.1
 Set as default gateway? (y/n): y
@@ -61,139 +86,140 @@ Revert to HTTP for webConfigurator? (y/n): n
 ```
 
 **Result:**  
-WAN = **10.10.10.215/24**, Gateway = 10.10.10.1, IPv6 disabled.
+WAN = `10.10.10.217/24`, Gateway = `10.10.10.1`, IPv6 disabled.
 
 ---
 
-## 3. LAN Configuration
+## 4. LAN Configuration
 
 **Why:**  
-Defines the internal network segment for local devices and servers.
+To define the internal subnet for servers and clients in the lab.
 
 **Console:**  
 ```bash
 Option 2) Set interface(s) IP address
-Enter number of interface: 2  (LAN)
+Enter number of interface: 2 (LAN)
 Configure IPv4 via DHCP? (y/n): n
-Enter IPv4 address: 192.178.99.215
+Enter IPv4 address: 192.178.99.217
 Enter subnet bit count: 24
-Enter gateway: [Press ENTER for none]
+Gateway: [Press Enter]
 Configure IPv6? (y/n): n
 Enable DHCP server on LAN? (y/n): n
 Revert to HTTP for webConfigurator? (y/n): n
 ```
 
 **Result:**  
-LAN = **192.178.99.215/24**, no gateway, IPv6 disabled, static setup.
+LAN = `192.178.99.217/24`, DHCP and IPv6 disabled.
 
 ---
 
-## 4. WebConfigurator Access
+## 5. WebConfigurator Access
 
 **Why:**  
-To manage pfSense through a secure browser connection.
+To manage pfSense via browser with HTTPS for security.
 
-**Steps:**
-1. From a client inside LAN, open browser →  
-   `https://192.178.99.215/`
-2. Accept the SSL certificate warning.
-3. Default credentials:  
-   - **Username:** `admin`  
-   - **Password:** `pfsense`
-
-**(Optional):** Change port from **443** → **8443** for BSI compliance.
+**Steps:**  
+1. From a client in the LAN, open browser → `https://192.178.99.217/`
+2. Accept SSL certificate warning.
+3. Login credentials:
+   - Username: `admin`
+   - Password: `pfsense`
+4. (Optional) Change port for admin interface:
+   - *System → Advanced → Admin Access → HTTPS Port = 8443*
 
 ---
 
-## 5. Connectivity Test
+## 6. Connectivity Test
 
 **Why:**  
-To confirm that routing and gateway configuration are operational.
+To verify routing and connectivity through pfSense.
 
-**Console:**
+**Console:**  
 ```bash
 Option 7) Ping host
 Enter host: 8.8.8.8
 ```
-
-**Result:**
+Expected output:
 ```
-3 packets transmitted, 3 packets received
-0% packet loss
+3 packets transmitted, 3 packets received, 0% packet loss
 ```
-
-Connectivity confirmed — WAN is online.
 
 ---
 
-## 6. Security Hardening
+## 7. Firewall Rules – Allowlist Model
 
 **Why:**  
-To align firewall with BSI NET.3.2 recommendations.
+To follow a Default Deny → Allowlist principle for outbound traffic.
 
-| Baustein | Maßnahme | Begründung |
-|-----------|-----------|------------|
-| A2/A3/A4 | Default-Deny Firewall-Policy | Minimiert Angriffsfläche |
-| A6 | Admin access via port 8443 | 443 is a well-known target |
-| A7 | Anti-Lockout Rule active | Prevents admin lockouts |
-| A8 | Routing services disabled | Only firewalling active |
-| A9 | Logging enabled by default | Provides traceability |
-| A10 | Fragmentation protection | Built-in pf engine defense |
-| A17 | IPv6 disabled | Smaller attack surface |
+**Steps (GUI):**  
+1. *Firewall → Rules → LAN*  
+2. Remove “Allow All” rule.  
+3. Add rules in this order:
 
----
+| # | Protocol | Destination | Port | Description |
+|---|-----------|--------------|------|--------------|
+| 1 | ICMP | any | any | Allow Ping / Traceroute |
+| 2 | TCP | any | 80 | HTTP outbound |
+| 3 | TCP | any | 443 | HTTPS outbound |
+| 4 | TCP/UDP | 192.178.99.147 | 53 | DNS to Domain Controller |
+| 5 | UDP | 192.178.99.147 | 123 | NTP to Domain Controller |
+| 6 | TCP/UDP | any | 88,389,445,464,3268,3269 | AD communication |
+| 7 | Block | any | any | Default Deny |
 
-## 7. Summary of Key Settings
-
-| Parameter | Value |
-|------------|--------|
-| WAN IP | 10.10.10.215/24 |
-| WAN Gateway | 10.10.10.1 |
-| LAN IP | 192.178.99.215/24 |
-| IPv6 | Disabled |
-| DHCP | Disabled |
-| Admin Access | HTTPS → 192.178.99.215 |
-| pfSense Version | 2.7.0-RELEASE |
-| Security Policy | Default Deny / Allowlist only |
+**Apply Changes** to activate the rule set.
 
 ---
 
-## 8. Verification Commands
+## 8. Security and BSI Alignment
 
-**Show Interface Status:**
-```bash
-ifconfig
-```
-
-**Check Gateway Connectivity:**
-```bash
-ping 10.10.10.1
-```
-
-**Firewall Logs:**
-```
-Status → System Logs → Firewall
-```
+| Measure | Description | Reason |
+|----------|--------------|--------|
+| A2/A3/A4 | Default Deny firewall approach | Minimizes attack surface |
+| A6 | Admin port changed to 8443 | Avoids default 443 port scans |
+| A8 | Routing disabled (firewall only) | Reduces misuse risk |
+| A9 | Logging enabled | Ensures traceability |
+| A17 | IPv6 disabled | Prevents unwanted traffic leaks |
 
 ---
 
 ## 9. Maintenance
 
-- **Backup Config:** Diagnostics → Backup/Restore.  
-- **Update System:** Console → Option 13 (Update from console).  
-- **Restart Services:** Console → Option 16 (Restart PHP-FPM).  
-- **Reboot:** Console → Option 5.
+**Backup Configuration:**  
+- *Diagnostics → Backup/Restore → Download Configuration*
+
+**System Updates:**  
+- *Console Option 13 → Upgrade from console*
+
+**Reboot System:**  
+- *Console Option 5 → Reboot*
+
+**Restart Services:**  
+- *Option 16 → Restart PHP-FPM (WebConfigurator)*
 
 ---
 
-## 10. Access Recap
+## 10. Verification Checklist
 
-| Access Type | Address | Protocol |
-|--------------|----------|-----------|
-| WebConfigurator | https://192.178.99.215 | HTTPS |
-| Console | Proxmox → pfSense Console | Direct |
-| Ping Test | 8.8.8.8 | ICMP |
+| Task | Command / Action | Expected Result |
+|------|------------------|-----------------|
+| Test WAN connectivity | `ping 8.8.8.8` | Successful replies |
+| Test LAN connectivity | `ping 192.178.99.217` | Successful replies |
+| Check WebGUI | Open `https://192.178.99.217` | Login page visible |
+| Confirm NAT | Firewall → NAT → Outbound | Auto rule for 192.178.99.0/24 |
+| Review Logs | Status → System Logs → Firewall | Normal activity only |
 
+---
+
+## 11. Notes for Future Improvement
+
+- Consider migrating LAN to an RFC1918 range (e.g., 192.168.99.0/24) for production setups.
+- Integrate Syslog export for centralized log collection.
+- Create VLANs for separating departments (IT, Management, Operations) in larger deployments.
+
+---
+
+**End of Handbook – pfSense Firewall Configuration (Final Lab Version)**  
+*Created by Alchemist – Wave Campus, 2025*
 ---
 
 [← Back to Index](../index.md)
