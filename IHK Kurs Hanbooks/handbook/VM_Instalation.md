@@ -209,8 +209,8 @@ To follow a Default Deny → Allowlist principle for outbound traffic.
 | Test WAN connectivity | `ping 8.8.8.8` | Successful replies |
 | Test LAN connectivity | `ping 192.178.99.217` | Successful replies |
 | Check WebGUI | Open `https://192.178.99.217` | Login page visible |
-| Confirm NAT | Firewall → NAT → Outbound | Auto rule for 192.178.99.0/24 |
-| Review Logs | Status → System Logs → Firewall | Normal activity only |
+| Confirm NAT | Firewall -> NAT -> Outbound | Auto rule for 192.178.99.0/24 |
+| Review Logs | Status -> System Logs -> Firewall | Normal activity only |
 
 ---
 
