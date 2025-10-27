@@ -129,7 +129,7 @@ To manage pfSense via browser with HTTPS for security.
    - Username: `admin`
    - Password: `pfsense`
 4. (Optional) Change port for admin interface:
-   - *System → Advanced → Admin Access → HTTPS Port = 8443*
+   - *System -> Advanced -> Admin Access -> HTTPS Port = 8443*
 
 ---
 
@@ -156,7 +156,7 @@ Expected output:
 To follow a Default Deny → Allowlist principle for outbound traffic.
 
 **Steps (GUI):**  
-1. *Firewall → Rules → LAN*  
+1. *Firewall -> Rules -> LAN*  
 2. Remove “Allow All” rule.  
 3. Add rules in this order:
 
@@ -189,16 +189,16 @@ To follow a Default Deny → Allowlist principle for outbound traffic.
 ## 9. Maintenance
 
 **Backup Configuration:**  
-- *Diagnostics → Backup/Restore → Download Configuration*
+- *Diagnostics -> Backup/Restore -> Download Configuration*
 
 **System Updates:**  
-- *Console Option 13 → Upgrade from console*
+- *Console Option 13 -> Upgrade from console*
 
 **Reboot System:**  
-- *Console Option 5 → Reboot*
+- *Console Option 5 -> Reboot*
 
 **Restart Services:**  
-- *Option 16 → Restart PHP-FPM (WebConfigurator)*
+- *Option 16 -> Restart PHP-FPM (WebConfigurator)*
 
 ---
 
