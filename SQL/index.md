@@ -9,4 +9,4 @@
 
 ---
 
-[← Back to Index](../index_main_menu.md)
+[← Back to Main Menu](../index_main_menu.md)
