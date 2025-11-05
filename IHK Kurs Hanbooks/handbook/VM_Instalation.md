@@ -183,6 +183,8 @@ To follow a Default Deny → Allowlist principle for outbound traffic.
 | A9 | Logging enabled | Ensures traceability |
 | A17 | IPv6 disabled | Prevents unwanted traffic leaks |
 
+**Measure - IT-Grundschutz measures — basically Germany’s official cybersecurity control catalog.**
+
 ---
 
 ## 9. Maintenance
