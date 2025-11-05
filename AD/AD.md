@@ -26,3 +26,7 @@ You don’t manage AD. You survive it.
 - [Group Management](handbook/Groups.md)
 - [Password Reset](handbook/PasswordReset.md)
 - [Appendix](handbook/Appendix.md)
+
+---
+
+[← Back to Index](../index_main_menu.md)
