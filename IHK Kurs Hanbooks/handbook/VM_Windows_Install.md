@@ -111,15 +111,15 @@ To ensure proper integration with lab infrastructure (e.g. pfSense gateway).
 
 ## 6. System Hardening (BSI-Aligned Basics)
 
-| Measure | Description | Reason |
-|----------|--------------|--------|
-| A1 | Rename Administrator account | Reduces target visibility |
-| A3 | Enable Windows Firewall (default) | Baseline protection |
-| A4 | Disable Remote Assistance & unneeded services | Reduces attack surface |
-| A5 | Apply latest Windows Updates | Closes known vulnerabilities |
-| A7 | Disable autoplay for removable media | Stops autorun attacks |
-| A9 | Configure BitLocker (optional) | Protects data integrity |
-| A11 | Create regular restore points & backups | Forensic traceability |
+| Description | Reason |
+|--------------|--------|
+| Rename Administrator account | Reduces target visibility |
+| Enable Windows Firewall (default) | Baseline protection |
+| Disable Remote Assistance & unneeded services | Reduces attack surface |
+| Apply latest Windows Updates | Closes known vulnerabilities |
+| Disable autoplay for removable media | Stops autorun attacks |
+| Configure BitLocker (optional) | Protects data integrity |
+| Create regular restore points & backups | Forensic traceability |
 
 ---
 
