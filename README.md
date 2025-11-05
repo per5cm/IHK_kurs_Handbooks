@@ -1,4 +1,4 @@
-# IHK_KURS_HANDBOOKS
+# IHK KURS HANDBOOKS
 
 ## English
 
