@@ -52,7 +52,7 @@ To perform a clean installation and avoid OEM bloatware or unintended configurat
 4. Select edition: **Windows 11 Pro**.  
 5. Accept license terms.  
 6. Choose **Custom: Install Windows only (advanced)**.  
-7. Delete all partitions -> Create new → Next.  
+7. Delete all partitions -> Create new -> Next.  
 8. Installation runs (~10 min).
 
 ---
@@ -63,7 +63,7 @@ To perform a clean installation and avoid OEM bloatware or unintended configurat
 To ensure privacy-friendly, local-account-first configuration.
 
 **Steps:**  
-1. Select region → Keyboard layout.  
+1. Select region -> Keyboard layout.  
 2. When asked for Internet connection:  
    - Disconnect NIC temporarily or press `Shift + F10`, type:  
      ```bash
@@ -83,7 +83,7 @@ To enable optimized I/O performance under Proxmox.
 
 **Steps:**  
 1. Mount VirtIO ISO in VM.  
-2. Open Device Manager → Right-click unknown devices → “Update driver”.  
+2. Open Device Manager -> Right-click unknown devices -> “Update driver”.  
 3. Browse to mounted VirtIO CD drive → Select corresponding folders:  
    - NetKVM (for network)  
    - Balloon (for memory management)  
@@ -98,8 +98,8 @@ To enable optimized I/O performance under Proxmox.
 To ensure proper integration with lab infrastructure (e.g. pfSense gateway).
 
 **Steps:**  
-1. Control Panel → Network and Sharing Center → Change Adapter Settings.  
-2. Right-click adapter → Properties → IPv4.  
+1. Control Panel -> Network and Sharing Center -> Change Adapter Settings.  
+2. Right-click adapter -> Properties -> IPv4.  
 3. Assign manually (if static needed):  
    - IP: `192.178.99.150` (example)  
    - Subnet: `255.255.255.0`  
@@ -129,9 +129,9 @@ To ensure proper integration with lab infrastructure (e.g. pfSense gateway).
 |------|------------------|-----------------|
 | Check network status | `ping 8.8.8.8` | Replies received |
 | Check hostname | `hostname` | Correct lab name |
-| Check Windows activation | Settings → System → Activation | “Activated” or valid grace period |
+| Check Windows activation | Settings -> System -> Activation | “Activated” or valid grace period |
 | Check update status | `winver` / Windows Update | Latest build installed |
-| Verify firewall | Windows Defender → Firewall & Network Protection | Active and enabled |
+| Verify firewall | Windows Defender -> Firewall & Network Protection | Active and enabled |
 
 ---
 
@@ -147,7 +147,7 @@ To ensure proper integration with lab infrastructure (e.g. pfSense gateway).
 - Stop VM -> Take snapshot before major changes.  
 
 **Restore:**  
-- Select snapshot → Rollback.
+- Select snapshot -> Rollback.
 
 ---
 
