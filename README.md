@@ -17,7 +17,7 @@ Each section provides a modular Markdown-based guide focused on clarity, reprodu
 
 To navigate, open `index_main_menu.md` — it links to all major handbooks.
 
-> All documentation is written in Markdown for version control and compatibility with GitHub.
+> All documentation is written in Markdown for version control and compatibility with GitHub. MkDocs oder Docsify to consider for the future.
 
 ---
 
