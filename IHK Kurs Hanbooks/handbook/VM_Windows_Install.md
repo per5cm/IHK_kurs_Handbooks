@@ -84,7 +84,7 @@ To enable optimized I/O performance under Proxmox.
 **Steps:**  
 1. Mount VirtIO ISO in VM.  
 2. Open Device Manager -> Right-click unknown devices -> “Update driver”.  
-3. Browse to mounted VirtIO CD drive → Select corresponding folders:  
+3. Browse to mounted VirtIO CD drive -> Select corresponding folders:  
    - NetKVM (for network)  
    - Balloon (for memory management)  
    - vioscsi (for storage)  
