@@ -1,5 +1,4 @@
-# pfSense Firewall Configuration – Final Lab Version (Proxmox Edition)
-*Created by Alchemist – Wave Campus, 2025*
+# pfSense Firewall Configuration (Proxmox Edition)
 
 ---
 
@@ -222,8 +221,8 @@ To follow a Default Deny → Allowlist principle for outbound traffic.
 
 ---
 
-**End of Handbook – pfSense Firewall Configuration (Final Lab Version)**  
-*Created by Alchemist – Wave Campus, 2025*
+**End of Handbook – pfSense Firewall Configuration**  
+
 ---
 
 [← Back to Index](../index.md)

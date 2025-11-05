@@ -1,5 +1,4 @@
-# Windows 11 Installation – Final Lab Version (Proxmox Edition)
-*Created by Alchemist – Wave Campus, 2025*
+# Windows 11 Installation
 
 ---
 
@@ -160,8 +159,7 @@ To ensure proper integration with lab infrastructure (e.g. pfSense gateway).
 
 ---
 
-**End of Handbook – Windows 11 Installation (Final Lab Version)**  
-*Created by Alchemist – Wave Campus, 2025*
+**End of Handbook – Windows 11 Installation**
 
 ---
 
