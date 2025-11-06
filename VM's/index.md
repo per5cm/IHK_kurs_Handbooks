@@ -1,6 +1,10 @@
 ## Epigraph
 
-VM's - Virtual Machines
+>Virtual Machines: Notes from the Electric Zoo
+
+Beneath the calm hum of fans lies a universe of fake machines pretending to be real.
+Here we spawn, snapshot, and obliterate worlds before lunch.
+Hardware is merely a suggestion — the hypervisor is god, and rebooting is prayer.
 
 ## Index
 - [Windows SetUp](handbook/VM_Windows_Install.md)
