@@ -1,6 +1,6 @@
 ## Epigraph
 
->Virtual Machines: Notes from the Electric Zoo
+*Virtual Machines: Notes from the Electric Zoo*
 
 Beneath the calm hum of fans lies a universe of fake machines pretending to be real.
 Here we spawn, snapshot, and obliterate worlds before lunch.
