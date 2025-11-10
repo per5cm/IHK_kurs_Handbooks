@@ -42,4 +42,4 @@ Zum Navigieren die Datei `index_main_menu.md` öffnen – sie enthält alle Haup
 
 ---
 
-*Maintained by Alchemist @ Wave Campus, 2025*  
+*Maintained by Alchemist @ Wave Campus, 2025*
