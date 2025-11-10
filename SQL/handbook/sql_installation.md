@@ -80,8 +80,7 @@ SELECT * FROM favorite LIMIT 10;
 ## 4) Path & Windows quirks
 
 -   Use `/` or `\` in paths.
--   If `.import` fails, check if table exists or if headers are
-    included.
+-   If `.import` fails, check if table exists or if headers are included.
 -   Everything defaults to TEXT unless schema is pre-created.
 
 ------------------------------------------------------------------------
