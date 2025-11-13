@@ -15,8 +15,8 @@ C:\Users\Eric\Databases\
 │   │   ├── favorites.csv
 │   │   └── exports\
 │   └── Lecture8\
-├── Playground\       ← experiments
-└── Archive\          ← backups/old versions
+├── Playground\       <- experiments
+└── Archive\          <- backups/old versions
 ```
 
 **Rules:**
